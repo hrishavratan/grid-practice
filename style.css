@@ -1,0 +1,131 @@
+div{
+    border:2px solid red;
+    border-radius: 5px;
+}
+body{
+    display:grid;
+    gap:20px;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 40px 40px 300px 40px 40px 40px;
+}
+ @media(max-width:768px)
+ {
+    .header,.nav,.main,.side,.ads,.footer{
+        grid-column: 1/4;
+    }
+ }
+
+ @media(min-width:769px ) and (max-width:1023px)
+ {
+    .header,.nav{
+        grid-column: 1/4;
+    }
+    .main{
+        grid-column: 2/4;
+    }
+    .side{
+        grid-column: 1/2;
+        grid-row:3/4;
+    }
+    .footer{
+        grid-column: 2/4;
+    }
+ }
+
+@media (min-width:1024px)
+{
+    .header{
+        grid-column: 1/4;
+    }
+    .nav,.main{
+        grid-column: 2/3;
+    }
+    .side {
+        grid-row: 2/4;
+    }
+    .ads{
+        grid-row: 2/4;
+        grid-column: 3/4;
+    }
+    .footer{
+        grid-column: 1/4;
+    }
+}
+
+/* div {
+    border: 2px solid red;
+}
+
+@media screen and (min-width:993px) {
+    body {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 200px auto 200px;
+        grid-template-rows: 50px 50px 350px 50px;
+    }
+
+    .header {
+        grid-column: 1/4;
+    }
+
+    .nav {
+        grid-column: 2/3;
+    }
+
+    .side {
+        grid-row: 2/4;
+    }
+
+    .ads {
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+
+    .footer {
+        grid-column: 1/4;
+    }
+}
+
+@media (min-width:721px) and (max-width:992px) {
+    body{
+        display:grid;
+        grid-template-columns: 200px auto;
+        grid-auto-rows: 50px 50px 500px 50px;
+        gap:20px;
+    }
+    .header{
+        grid-column: 1/4;
+    }
+    .nav {
+        grid-column: 1/4;
+    }
+
+    .side {
+        grid-row: 3/4;
+    }
+
+    .ads {
+        grid-row: 3/4;
+    }
+
+    .main {
+        grid-column: 2/4;
+    }
+
+    .ads {
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .footer {
+        grid-column: 2/4;
+    }
+}
+
+@media screen and (max-width:720px) {
+    body {
+        display: grid;
+        grid-template-rows: 50px 50px 300px 50px 50px 50px;
+        gap: 20px;
+    }
+} */
